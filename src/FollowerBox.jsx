@@ -14,9 +14,7 @@ const FollowersBox = () => {
     fetch(`https://graph.facebook.com/${profileUrl}?fields=id,name,email,picture&access_token=${accessToken}`)
       .then(response => response.json())
       .then(data => {
-        if (data.error) {
-         
-        } else {
+      
           setProfileData(data);
         
         }
