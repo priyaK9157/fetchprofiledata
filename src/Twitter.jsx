@@ -29,7 +29,7 @@ const TwitterProfileFetcher = () => {
   return (
     <div className="flex items-center justify-center h-screen ">
       <div className="w-64 p-6 bg-blue-500 text-center rounded-lg shadow-lg">
-        {/* <FaXTwitter className='text-3xl mx-auto mt-1 pb-1 text-white' /> */}
+        <FaXTwitter className='text-3xl mx-auto mt-1 pb-1 text-white' />
         <input
           type="text"
           placeholder="Enter Twitter username"
