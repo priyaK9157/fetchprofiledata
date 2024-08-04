@@ -15,15 +15,15 @@ const FollowersBox = () => {
       .then(response => response.json())
       .then(data => {
         if (data.error) {
-          setError(data.error.message);
+         
         } else {
           setProfileData(data);
-          setError(null);
+        
         }
       })
       .catch(error => {
         console.error('Error fetching user data:', error);
-        setError('An error occurred while fetching data.');
+       
       });
   }
 
