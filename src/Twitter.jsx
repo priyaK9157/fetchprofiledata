@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import {FaXTwitter} from "react-icons/fa
+
 
 const TwitterProfileFetcher = () => {
   const [profile, setProfile] = useState(null);
@@ -29,7 +29,7 @@ const TwitterProfileFetcher = () => {
   return (
     <div className="flex items-center justify-center h-screen ">
       <div className="w-64 p-6 bg-blue-500 text-center rounded-lg shadow-lg">
-        <FaXTwitter className='text-3xl mx-auto mt-1 pb-1 text-white' />
+    
         <input
           type="text"
           placeholder="Enter Twitter username"
