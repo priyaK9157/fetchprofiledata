@@ -50,6 +50,7 @@ const TwitterProfileFetcher = () => {
             <h2 className="text-lg font-bold text-white">{profile.name} (@{profile.profile})</h2>
             <p className="text-white">Status: {profile.status}</p>
             <p className="text-white">Followers: {profile.friends}</p>
+             <p className="text-white">Post:{profile.media_count}</p>
           </div>
         )}
       </div>
