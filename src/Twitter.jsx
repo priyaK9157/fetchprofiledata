@@ -15,7 +15,6 @@ const TwitterProfileFetcher = () => {
           'X-RapidAPI-Host': 'twitter-api45.p.rapidapi.com'
         }
       });
-      console.log("re",response)
       setProfile(response.data);
     } catch (error) {
       console.error('Error fetching Twitter data:', error);
@@ -27,7 +26,6 @@ const TwitterProfileFetcher = () => {
       fetchUserData();
     }
   }, [username]);
-  console.log("profile",profile)
   return (
     <div className="flex items-center justify-center h-screen ">
       <div className="w-64 p-6 bg-blue-500 text-center rounded-lg shadow-lg">
