@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import {FaXTwitter} from "react-icons/fa
 
 const TwitterProfileFetcher = () => {
   const [profile, setProfile] = useState(null);
