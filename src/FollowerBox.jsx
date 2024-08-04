@@ -6,7 +6,7 @@ import { FaFacebook } from "react-icons/fa";
 const FollowersBox = () => {
   const [profileUrl, setProfileUrl] = useState(null);
   const [profileData, setProfileData] = useState(null);
- 
+  const[error,setError]=useState();
 
   const facebookDataFetch = () => {
     const accessToken = 'EAAOxVlLLxCwBOxX5wsh4ZBP808d4CcehwjwzEmVGhfFNkn3PCsDGk1RekmEPsQxyPE1GP6fs1cbSpoQ7uOelwtPbXXuZCBSiaIqwa5L5ZCLJZBnP9ouLP1w3qbZAzMQvpDcHHoSXy9ryE9PsMmIQXl6Y3BMNirfZBP3aRrJlo80bSkAUdoj0gX2mZBwD3dYA9O2aGXYKM7TpWl6QZBCc9S94kpM2aVoZD';
@@ -14,14 +14,16 @@ const FollowersBox = () => {
     fetch(`https://graph.facebook.com/${profileUrl}?fields=id,name,email,picture&access_token=${accessToken}`)
       .then(response => response.json())
       .then(data => {
-      
+        if (data.error) {
+          setError(data.error.message);
+        } else {
           setProfileData(data);
-        
+          setError(null);
         }
       })
       .catch(error => {
         console.error('Error fetching user data:', error);
-       
+        setError('An error occurred while fetching data.');
       });
   }
 
@@ -63,3 +65,4 @@ const FollowersBox = () => {
 };
 
 export default FollowersBox;
+
