@@ -4,14 +4,14 @@ import axios from 'axios';
 
 const TwitterProfileFetcher = () => {
   const [profile, setProfile] = useState(null);
-  const [username, setUsername] = useState('PriyaKu78756722'); // Use a separate state for the username
+  const [username, setUsername] = useState('PriyaKu78756722');
 
   const fetchUserData = async () => {
     try {
       const response = await axios.get('https://twitter-api45.p.rapidapi.com/screenname.php', {
         params: { screenname: username },
         headers: {
-          'X-RapidAPI-Key': 'df16a8cbdfmsh1792088bb0ab5c0p1f690ajsndfa1d85ddd7f', // Replace with your actual RapidAPI key
+          'X-RapidAPI-Key': 'df16a8cbdfmsh1792088bb0ab5c0p1f690ajsndfa1d85ddd7f', 
           'X-RapidAPI-Host': 'twitter-api45.p.rapidapi.com'
         }
       });
